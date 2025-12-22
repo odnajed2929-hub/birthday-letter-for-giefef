@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Background Video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Blue Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(30, 60, 114, 0.75),
+        rgba(42, 82, 152, 0.75)
+      );
+      z-index: -1;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    /* Slideshow - bigger and centered */
+    .slideshow {
+      position: relative;
+      width: 400px;      /* bigger circle */
+      height: 400px;     /* bigger circle */
+      margin: 50px auto; /* centered with spacing */
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid white;
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    button {
+      background: #ff4b5c;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    /* Hidden Love Letter */
+    #loveLetter {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Floating Emojis */
+    .float {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatUp linear forwards;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive Slideshow for Mobile */
+    @media (max-width: 600px) {
+      .slideshow {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+  </style>
+</head>     
+<body>
+
+  <!-- Background Video -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>Happy Birthday, My gi ef ef 🎉</h1>
+    <h2>You are my favorite person ❤️</h2>
+
+    <!-- Slideshow with 8 images -->
+    <div class="slideshow">
+      <img src="img1.jfif" class="active">
+      <img src="img2.jfif">
+      <img src="img3.jfif">
+      <img src="img4.jfif">
+      <img src="img5.jfif">
+      <img src="img6.jfif">
+      <img src="img7.jfif">
+      <img src="img8.jfif">
+    </div>
+
+    <div class="card">
+      <p>
+        Happy birthday, my gi ef ef 💖 <br><br>
+        Every day with you feels like a blessing.
+        Thank you for loving me everyday
+        and making my life brighter just by being in it.
+      </p>
+
+      <button onclick="playMusic()">Play Music 🎶</button>
+      <br>
+      <button onclick="showLetter()">Open Love Letter 💌</button>
+
+      <p id="loveLetter">
+       Happy birthday, langga ko  my baby, my gi ef ef, my Jerry, my everything.
+
+Ang adlaw nga ni is truly a blessing not just for me but for so many people, because amo ni nga adlaw nga nabata ka. Thank you for simply existing. Thank you for being you.
+
+Sorry gid if sometimes gaaway ta because of our differences. Kabalo ka man nga love ta gid ka always please don’t ever question that, and don’t compare yourself to anyone. You are more than enough for me.
+
+Sorry gid sa mga actions ko kis-a kag mga sala nga desisyon i know gakasakitan ka gid. I promise I will work very hard to become the best version of myself and to change the things nga indi mo gusto. Let’s not give up on each other, okay? Let’s grow together as a couple and become better versions of ourselves.
+
+Ga look forward gid ko nga magbuild sang future ta nga duha. I promise nga magwork hard gid ko para maabot ta ang dreams ta nga duha. Diri lang ko permi sa tupad mo nagasupport sa imo sa bisan ano nga gusto mo obrahon. Please help me too ha para maging better partner man ko kag better person in general.
+
+I hope nga bisan ano nga problems ang maencounter ta sa future, ma-fix ta gid together. Let’s help each other always. I will always choose to fix things with you, langga ko.
+
+Happy birthday gid liwat my baby decem. Looking forward gid ko sa future nga tani macelebrate ta na ang birthday mo together Hehe. I wish I could hug you 24/7  because kabalo ko nga damo nga tawo abi nila nga happy happy ka lang, pero wala sila kabalo sang mga frustrations kag stresses mo sa kabuhi .
+
+Pero don’t worry diri lang ko permi sa tupad mo, mamati sa imo rants kag maging kontra sang mga kontra mo. Oo ma'am. Faraon ikaw ginaparinggan ko. HAHAHAHAHA Kidding aside, enjoy your day, my baby.
+
+baby decem, I will always be here sa tupad mo. Miskin bilog pa nga kalibutan magtalikod kag magkontra sa imo, I will always be your kakampi.
+
+I love you always, in all ways.
+<br>
+— jofet
+      </p>
+    </div>
+
+    <footer>
+      Made with ❤️ by Jofet
+    </footer>
+  </div>
+
+  <script>
+    /* Slideshow for 8 images */
+    let slides = document.querySelectorAll(".slideshow img");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000); // Change 3000 to 4000 for slower slideshow
+
+    /* Music */
+    function playMusic() {
+      document.getElementById("bgMusic").play();
+    }
+
+    /* Love Letter */
+    function showLetter() {
+      document.getElementById("loveLetter").style.display = "block";
+    }
+
+    /* Floating Hearts + 😘 */
+    const emojis = ["❤️", "😘"];
+
+    setInterval(() => {
+      const float = document.createElement("div");
+      float.className = "float";
+      float.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+      float.style.left = Math.random() * 100 + "vw";
+      float.style.animationDuration = (3 + Math.random() * 3) + "s";
+      document.body.appendChild(float);
+
+      setTimeout(() => {
+        float.remove();
+      }, 6000);
+    }, 400);
+  </script>
+
+</body>
+</html>
