@@ -13,8 +13,6 @@
       text-align: center;
       overflow-x: hidden;
     }
-
-    /* Background Video */
     .video-bg {
       position: fixed;
       top: 0;
@@ -24,8 +22,6 @@
       object-fit: cover;
       z-index: -2;
     }
-
-    /* Blue Overlay */
     .overlay {
       position: fixed;
       top: 0;
@@ -56,13 +52,11 @@
       font-weight: 300;
       margin-bottom: 30px;
     }
-
-    /* Slideshow - bigger and centered */
     .slideshow {
       position: relative;
-      width: 400px;      /* bigger circle */
-      height: 400px;     /* bigger circle */
-      margin: 50px auto; /* centered with spacing */
+      width: 400px;      
+      height: 400px;     
+      margin: 50px auto;
       border-radius: 50%;
       overflow: hidden;
       border: 5px solid white;
@@ -107,8 +101,6 @@
       cursor: pointer;
       margin-top: 20px;
     }
-
-    /* Hidden Love Letter */
     #loveLetter {
       display: none;
       margin-top: 20px;
@@ -125,8 +117,6 @@
       font-size: 0.9rem;
       opacity: 0.8;
     }
-
-    /* Floating Emojis */
     .float {
       position: fixed;
       bottom: -20px;
@@ -145,8 +135,6 @@
         opacity: 0;
       }
     }
-
-    /* Responsive Slideshow for Mobile */
     @media (max-width: 600px) {
       .slideshow {
         width: 300px;
@@ -157,15 +145,11 @@
   </style>
 </head>     
 <body>
-
-  <!-- Background Video -->
   <video class="video-bg" autoplay muted loop playsinline>
     <source src="bg.mp4" type="video/mp4">
   </video>
 
   <div class="overlay"></div>
-
-  <!-- Background Music -->
   <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
   </audio>
@@ -173,8 +157,6 @@
   <div class="container">
     <h1>Happy Birthday, My gi ef ef 🎉</h1>
     <h2>You are my favorite person ❤️</h2>
-
-    <!-- Slideshow with 8 images -->
     <div class="slideshow">
       <img src="img1.jfif" class="active">
       <img src="img2.jfif">
@@ -229,7 +211,6 @@ I love you always, in all ways.
   </div>
 
   <script>
-    /* Slideshow for 8 images */
     let slides = document.querySelectorAll(".slideshow img");
     let index = 0;
 
@@ -238,18 +219,12 @@ I love you always, in all ways.
       index = (index + 1) % slides.length;
       slides[index].classList.add("active");
     }, 3000); // Change 3000 to 4000 for slower slideshow
-
-    /* Music */
     function playMusic() {
       document.getElementById("bgMusic").play();
     }
-
-    /* Love Letter */
     function showLetter() {
       document.getElementById("loveLetter").style.display = "block";
     }
-
-    /* Floating Hearts + 😘 */
     const emojis = ["❤️", "😘"];
 
     setInterval(() => {
@@ -268,4 +243,5 @@ I love you always, in all ways.
 
 </body>
 </html>
+
 
